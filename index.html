@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料金計算システム</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <form class="input_product_fee" method="post" action="">
+
+        <div class="form-group">
+            <label for="unit_price">単価(円)：</label>
+            <input type="number" id="unit_price" placeholder="100" min="0" step="1" />
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">数量(個)：</label>
+            <input type="number" id="quantity" placeholder="10" min="0" step="1" />
+        </div>
+
+        <div class="form-group">
+            <label for="discount_method">割引方法：</label>
+            <select name="discount_method" id="discount_method">
+                <option value="discount_fee" id="discount_fee">割引額</option>
+                <option value="discount_rate" id="discount_rate">割引率</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="discount_fee_rate">割引値：</label>
+            <input type="number" id="discount_fee_rate" min="0" />
+        </div>
+
+        <div class="form-group">
+            <label for="sales_tax">消費税：</label>
+            <select name="sales_tax" id="sales_tax">
+                <option value="8">8%</option>
+                <option value="10">10%</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <a id="fee_calculation">計算</a>
+        </div>
+
+    </form>
+
+    <div class="output_product_fee">
+        <span id="result_product_fee"></span>
+    </div>
+</body>
+
+</html>
